@@ -1,0 +1,28 @@
+[project]
+name = "djangogilrs"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Kyle Felipe",email = "kylefelipe@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "django (>=5.2.4,<6.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.14.1"
+
+# Tarefa do taskipy
+[tool.taskipy.tasks]
+# Rodando o servidor de desenvolvimento
+runserver = "python manage.py runserver"
+# inicia um app django
+startapp = "python manage.py startapp"
+# Cria as migrações
